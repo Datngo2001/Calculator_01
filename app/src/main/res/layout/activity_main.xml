@@ -1,18 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Ngo Minh Đat: 14/3/2022: LinearLinearLayout vertical xếp các element theo hàng dọc -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/black">
+    <!-- Tran Phuong Nam: 14/3/2022: chứa text view để hiển thi kết quả -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:background="@color/darkGrey">
+        <!-- Tran Phuong Nam: 14/3/2022: text view để hiển thi kết quả -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/darkGrey"
+            android:gravity="center_vertical"
+            android:layout_gravity="right"
+            android:text="12345"
+            android:textColor="@color/white"
+            android:textSize="100sp" />
+    </LinearLayout>
+    <!-- Tran Phuong Nam: 14/3/2022: LinearLinearLayout vertical các dòng layout khác cho các nút -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+        <!-- Ngô Minh Đạt: 14/3/2022: LinearLinearLayout dùng để xếp các button theo hàng ngang -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <!-- Ngô Minh Đạt: 14/3/2022: các button có weight là 1 để có kích thước bằng nhau -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/lightGrey"
+                android:text="7"
+                android:textColor="@color/black"
+                android:textSize="@dimen/calButtonTextSize"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/lightGrey"
+                android:textColor="@color/black"
+                android:text="8"
+                android:textSize="@dimen/calButtonTextSize"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/lightGrey"
+                android:textColor="@color/black"
+                android:text="9"
+                android:textSize="@dimen/calButtonTextSize"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/orange"
+                android:textColor="@color/black"
+                android:text="/"
+                android:textSize="@dimen/calButtonTextSize"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/lightGrey"
+                android:textColor="@color/black"
+                android:text="4"
+                android:textSize="@dimen/calButtonTextSize"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/lightGrey"
+                android:textColor="@color/black"
+                android:text="5"
+                android:textSize="@dimen/calButtonTextSize"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/lightGrey"
+                android:textColor="@color/black"
+                android:text="6"
+                android:textSize="@dimen/calButtonTextSize"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/orange"
+                android:textColor="@color/black"
+                android:text="x"
+                android:textSize="@dimen/calButtonTextSize"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/lightGrey"
+                android:textColor="@color/black"
+                android:text="1"
+                android:textSize="@dimen/calButtonTextSize"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/lightGrey"
+                android:textColor="@color/black"
+                android:text="2"
+                android:textSize="@dimen/calButtonTextSize"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/lightGrey"
+                android:textColor="@color/black"
+                android:text="3"
+                android:textSize="@dimen/calButtonTextSize"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/orange"
+                android:textColor="@color/black"
+                android:text="-"
+                android:textSize="@dimen/calButtonTextSize"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/lightGrey"
+                android:textColor="@color/black"
+                android:text="0"
+                android:textSize="@dimen/calButtonTextSize"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/lightGrey"
+                android:textColor="@color/black"
+                android:text="."
+                android:textSize="@dimen/calButtonTextSize"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/orange"
+                android:textColor="@color/black"
+                android:text="+"
+                android:textSize="@dimen/calButtonTextSize"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/orange"
+                android:textColor="@color/black"
+                android:text="C"
+                android:textSize="@dimen/calButtonTextSize"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/orange"
+                android:textColor="@color/black"
+                android:text="="
+                android:textSize="@dimen/calButtonTextSize"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
