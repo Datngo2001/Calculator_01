@@ -17,6 +17,7 @@
         android:background="@color/darkGrey">
         <!-- Tran Phuong Nam: 14/3/2022: text view để hiển thi kết quả -->
         <TextView
+            android:id="@+id/mainText"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -40,6 +41,7 @@
             android:layout_weight="1">
             <!-- Ngô Minh Đạt: 14/3/2022: các button có weight là 1 để có kích thước bằng nhau -->
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn7"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -48,6 +50,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/calButtonTextSize"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn8"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -57,6 +60,7 @@
                 android:textSize="@dimen/calButtonTextSize"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn9"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -66,6 +70,7 @@
                 android:textSize="@dimen/calButtonTextSize"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDiv"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -79,6 +84,7 @@
             android:layout_height="0dp"
             android:layout_weight="1">
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -87,6 +93,7 @@
                 android:text="4"
                 android:textSize="@dimen/calButtonTextSize"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -96,6 +103,7 @@
                 android:textSize="@dimen/calButtonTextSize"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn6"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -105,6 +113,7 @@
                 android:textSize="@dimen/calButtonTextSize"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnMul"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -118,6 +127,7 @@
             android:layout_height="0dp"
             android:layout_weight="1">
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -126,6 +136,7 @@
                 android:text="1"
                 android:textSize="@dimen/calButtonTextSize"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -135,6 +146,7 @@
                 android:textSize="@dimen/calButtonTextSize"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -144,6 +156,7 @@
                 android:textSize="@dimen/calButtonTextSize"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSub"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -157,6 +170,7 @@
             android:layout_height="0dp"
             android:layout_weight="1">
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn0"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
@@ -165,6 +179,7 @@
                 android:text="0"
                 android:textSize="@dimen/calButtonTextSize"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn."
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -174,6 +189,7 @@
                 android:textSize="@dimen/calButtonTextSize"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPlu"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -187,6 +203,7 @@
             android:layout_height="0dp"
             android:layout_weight="1">
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnC"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -196,6 +213,7 @@
                 android:textSize="@dimen/calButtonTextSize"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEqual"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
