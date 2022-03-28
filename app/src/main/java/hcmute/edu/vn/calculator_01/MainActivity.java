@@ -1,16 +1,20 @@
 package hcmute.edu.vn.calculator_01;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+
+import org.mozilla.javascript.Scriptable;
+import org.mozilla.javascript.Context;
+
 public class MainActivity extends AppCompatActivity {
 
-    TextView mainTextView;
+    TextView mainTextView, operation, result;
+    String input, output;
     AppCompatButton[] numberBtn;
 
     @Override
@@ -54,7 +58,24 @@ public class MainActivity extends AppCompatActivity {
 
         btn =(AppCompatButton) findViewById(R.id.btnC);
         btn.setOnClickListener(new clearClick());
+
+        btn =(AppCompatButton) findViewById(R.id.btnEqual);
+        btn.setOnClickListener(new equalClick());
+
+        btn =(AppCompatButton) findViewById(R.id.btnMul);
+        btn.setOnClickListener(new mulClick());
+
+        btn =(AppCompatButton) findViewById(R.id.btnDiv);
+        btn.setOnClickListener(new divClick());
+
+        btn =(AppCompatButton) findViewById(R.id.btnPlu);
+        btn.setOnClickListener(new pluClick());
+
+        btn =(AppCompatButton) findViewById(R.id.btnSub);
+        btn.setOnClickListener(new subClick());
+
     }
+
 
     private class numberClick implements View.OnClickListener{
 
@@ -66,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
             text += btnText;
             mainTextView.setText(text);
         }
+
     }
 
     private class clearClick implements View.OnClickListener{
@@ -75,4 +97,75 @@ public class MainActivity extends AppCompatActivity {
             mainTextView.setText("");
         }
     }
+
+    private class mulClick implements View.OnClickListener{
+
+        @Override
+        public void onClick(View view){
+            Button btn = (Button) view;
+            String btnText = btn.getText().toString();
+            String text = mainTextView.getText().toString();
+            text += btnText;
+            mainTextView.setText(text);
+        }
+    }
+
+    private class equalClick implements View.OnClickListener{
+
+        @Override
+        public void onClick(View view) {
+            Button btn = (Button) view;
+            String btnText = btn.getText().toString();
+            String text = mainTextView.getText().toString();
+            text = text.replaceAll("x","*");
+            text = text.replaceAll("/","/");
+            Context rhino=Context.enter();
+            rhino.setOptimizationLevel(-1);
+
+            String finalResult="";
+
+            Scriptable scriptable=rhino.initStandardObjects();
+            finalResult=rhino.evaluateString(scriptable,text,"Javascript",1,null).toString();
+
+            mainTextView.setText(finalResult);
+        }
+    }
+
+    private class divClick implements View.OnClickListener{
+
+        @Override
+        public void onClick(View view){
+            Button btn = (Button) view;
+            String btnText = btn.getText().toString();
+            String text = mainTextView.getText().toString();
+            text += btnText;
+            mainTextView.setText(text);
+        }
+    }
+    private class pluClick implements View.OnClickListener{
+
+        @Override
+        public void onClick(View view){
+            Button btn = (Button) view;
+            String btnText = btn.getText().toString();
+            String text = mainTextView.getText().toString();
+            text += btnText;
+            mainTextView.setText(text);
+        }
+    }
+
+    private class subClick implements View.OnClickListener{
+
+        @Override
+        public void onClick(View view){
+            Button btn = (Button) view;
+            String btnText = btn.getText().toString();
+            String text = mainTextView.getText().toString();
+            text += btnText;
+            mainTextView.setText(text);
+        }
+    }
+
+
+
 }

@@ -220,7 +220,8 @@
                 android:background="@color/orange"
                 android:textColor="@color/black"
                 android:text="="
-                android:textSize="@dimen/calButtonTextSize"/>
+                android:textSize="@dimen/calButtonTextSize"
+                tools:ignore="OnClick" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
